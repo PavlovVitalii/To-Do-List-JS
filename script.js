@@ -4,7 +4,6 @@ const h1 = document.createElement("h1");
 const input = document.createElement("input");
 const button = document.createElement("button");
 const ul = document.createElement("ul");
-const check = document.createElement("input");
 
 list.classList.add("list");
 list.append(h1);
@@ -21,14 +20,32 @@ button.addEventListener("click", () => {
   const li = document.createElement("li");
   const clear = document.createElement("button");
   const p = document.createElement("p");
+  const check = document.createElement("input");
 
   li.append(check);
   li.append(p);
   li.append(clear);
   check.type = "checkbox";
+  check.id = "check";
   clear.textContent = "Delete";
   p.textContent = input.value;
+  
 
   ul.append(li);
   input.value = "";
+
+  check.addEventListener("change", (event) => {
+    
+   if (event.target.checked) {
+    p.style.textDecoration = "line-through";
+    p.style.textDecorationColor = "red";
+   } else {
+    p.style.textDecoration = "none";
+   }
+    
+  });
+
+  clear.addEventListener("click", ()=>{
+   
+  })
 });

@@ -52,6 +52,7 @@ button {
   background-color: #0d1117;
   font-size: 20px;
 }
+
 .add_button {
   margin-right: 30px;
 }
@@ -69,14 +70,9 @@ li {
 p {
   border-bottom: 1px solid #ffd700;
   width: 400px;
+  color:aliceblue;
 }
 
-.buttonsContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 130px;
-}
-
-input[type="checkbox"]{
-    transform: scale(1.5);
+input[type="checkbox"] {
+  transform: scale(1.5);
 }
