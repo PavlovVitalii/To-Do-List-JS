@@ -35,20 +35,23 @@ function createLi() {
   ul.append(li);
   input.value = "";
 
-  check.addEventListener("change", (event) => {
+  deleteLi(clear);
+  isDone(check, p);
+}
+
+function deleteLi(btn) {
+  btn.addEventListener("click", (event) => {
+    event.target.parentElement.remove();
+  });
+}
+
+function isDone(checkBox, p) {
+  checkBox.addEventListener("change", (event) => {
     if (event.target.checked) {
       p.style.textDecoration = "line-through";
       p.style.textDecorationColor = "red";
     } else {
       p.style.textDecoration = "none";
     }
-  });
-
-  deleteLi(clear);
-}
-
-function deleteLi(btn) {
-  btn.addEventListener("click", (event) => {
-    event.target.parentElement.remove();
   });
 }
