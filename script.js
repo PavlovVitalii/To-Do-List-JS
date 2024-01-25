@@ -16,7 +16,9 @@ input.type = "text";
 button.classList.add("add_button");
 button.textContent = "Add";
 
-button.addEventListener("click", () => {
+button.addEventListener("click", createLi);
+
+function createLi() {
   const li = document.createElement("li");
   const clear = document.createElement("button");
   const p = document.createElement("p");
@@ -29,23 +31,24 @@ button.addEventListener("click", () => {
   check.id = "check";
   clear.textContent = "Delete";
   p.textContent = input.value;
-  
 
   ul.append(li);
   input.value = "";
 
   check.addEventListener("change", (event) => {
-    
-   if (event.target.checked) {
-    p.style.textDecoration = "line-through";
-    p.style.textDecorationColor = "red";
-   } else {
-    p.style.textDecoration = "none";
-   }
-    
+    if (event.target.checked) {
+      p.style.textDecoration = "line-through";
+      p.style.textDecorationColor = "red";
+    } else {
+      p.style.textDecoration = "none";
+    }
   });
 
-  clear.addEventListener("click", ()=>{
-   
-  })
-});
+  deleteLi(clear);
+}
+
+function deleteLi(btn) {
+  btn.addEventListener("click", (event) => {
+    event.target.parentElement.remove();
+  });
+}

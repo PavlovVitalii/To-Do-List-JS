@@ -37,6 +37,7 @@ input[type="text"] {
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.6);
   margin: 36px 19px 0 50px;
+  padding: 5px;
   width: 400px;
   height: 35px;
 }
