@@ -34,7 +34,7 @@ h1 {
 
 input[type="text"] {
   color: rgba(33, 33, 33, 0.7);
-  border-radius: 3px;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.6);
   margin: 36px 19px 0 50px;
   padding: 5px;
@@ -42,15 +42,20 @@ input[type="text"] {
   height: 35px;
 }
 
+input[type="text"]:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
+}
+
 button {
   width: 101px;
   height: 35px;
   border-radius: 5px;
-  border: 2px solid var(--Gold, #ffd700);
+  border: 2px solid #ffd700;
   color: #ffd700;
   border-radius: 5px;
   text-align: center;
-  background-color: #0d1117;
+  background-color: black;
   font-size: 20px;
 }
 
@@ -58,9 +63,16 @@ button {
   margin-right: 30px;
 }
 
+button:hover {
+  background-color: #2f2f2f;
+  transition: all 0.15s ease-in 0s;
+}
+
 ul {
   margin: 50px 30px 0 20px;
   list-style: none;
+  max-height: 650px;
+  overflow: auto;
 }
 li {
   display: flex;
@@ -71,7 +83,7 @@ li {
 p {
   border-bottom: 1px solid #ffd700;
   width: 400px;
-  color:aliceblue;
+  color: aliceblue;
 }
 
 input[type="checkbox"] {
